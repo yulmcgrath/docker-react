@@ -1,9 +1,9 @@
 FROM node:alpine
 WORDKIR '/app'
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run builder
+RUN npm run build
 
 FROM nginx
 EXPOSE 80
